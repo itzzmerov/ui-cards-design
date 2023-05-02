@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+@font-face {
+    font-family: 'intro_script_demomedium';
+    src: url('../fonts/introscriptdemo-medium-webfont.woff2') format('woff2'),
+         url('../fonts/introscriptdemo-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-color: #023047;
+    --secondary-color: #FFB703;
+    --third-color: #FB8500;
+    --black: #13131a;
+    --bg: #FFFFFF;
+    --border: 1px solid rgba(0, 0, 0, 0.3);
+    --box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    --border-radius: 50px;
+}
+
+* {
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR CSS */
+
+.navbar {
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.navbar-logo {
+    width: 512px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo img {
+    width: 99.53px;
+    height: 84px;
+}
+
+.navbar-logo p {
+    font-family: 'intro_script_demomedium';
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+/* CONTENT SECTIONS */
+
+.ui-cards {
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);  
+    grid-template-rows: 1fr;
+    margin: 0px 5rem;
+}
+
+.heading {
+    font-family: 'intro_script_demomedium';
+    text-align: center;
+    font-size: 4rem;
+    color: var(--main-color);
+    padding: 4rem;
+    margin-top: 2rem;
+}
+
+.cards {
+    box-sizing: border-box;
+    background-color: var(--bg);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-left: 2rem;
+}
+
+.cards:hover {
+    background-color: var(--main-color);
+    color: var(--bg);
+    box-shadow: none;
+}
+
+.cards:hover .images {
+    transform: scale(1.5);
+    border-radius: 50px 50px 0px 0px;
+}
+
+.cards:hover .hobby-btn {
+    background-color: var(--third-color);
+    letter-spacing: .2rem;
+}
+
+.pics {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.pics .images {
+    width: 100%;
+    height: 300px;
+    display: block;
+    border-radius: 50px 50px 0px 0px;
+    transition: transform .5s ease;
+}
+
+.hobby-title {
+    font-family: 'intro_script_demomedium';
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 2rem;
+}
+
+.hobby-text {
+    font-family: 'Inter', sans-serif;
+    margin: 0 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hobby-btn {
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+    border: none;
+    margin: 20px 0px;
+    width: 224px;
+    height: 74px;
+    font-family: 'intro_script_demomedium';
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--main-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-family: 'intro_script_demomedium';
+    font-size: 1.5rem;
+    color: var(--bg);
+}
+
+footer p a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+footer p a:hover {
+    color: var(--third-color);
+}
+
+/* MEDIA QUERIES */
+
+/* For Tablets */
+
+@media (max-width: 970px) {
+    .ui-cards {
+        grid-template-columns: 1fr;
+        margin: 0px 2rem;
+    }
+    .heading {
+        font-size: 3rem;
+        padding: 3rem;
+        margin-top: 3rem;
+    }
+    .cards {
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .ui-cards {
+        grid-template-columns: 1fr;
+        margin: 0px 2rem;
+    }
+    .heading {
+        font-size: 3rem;
+        padding: 3rem;
+        margin-top: 3rem;
+    }
+    .cards {
+        margin: 2rem 0;
+    }
+}
+  
+/* For Phones */
+@media (max-width: 576px) {
+    .ui-cards {
+        grid-template-columns: 1fr;
+        margin: 0px 1rem;
+    }
+    .navbar-logo {
+        width: 250px;
+        height: 40px;
+    }
+    .navbar-logo img {
+        width: 49.77px;
+        height: 40px;
+    }
+    .navbar-logo p {
+        font-size: 1.5rem;
+    }
+    .heading {
+        font-size: 2rem;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    .cards {
+        margin: 1rem 0;
+    }
+    .hobby-title {
+        font-size: 1.5rem;
+    }
+    .hobby-text {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+    }
+    .hobby-btn {
+        margin: 10px 0px;
+        font-size: 1rem;
+        width: 180px;
+        height: 60px;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+}
+  
